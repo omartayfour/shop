@@ -1,3 +1,22 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+<h1>All customers added until now can be seen below. </h1>
 
+<h2> Add new customers </h2>
+<%= link_to 'Go to upload',upload_path %>
+ <br>
+ <br>
+<% counter = 1 %>
+ <% @customers.each do |c| %>
+    <% counter = counter + 1 %>
+    <% if counter % 2 == 0  %>
+        <div class="color1">
+            <%=c.name %>
+            <%=c.mobile %>
+        </div>
+    <% else %>
+        <div class="color2">
+            <%=c.name %>
+            <%=c.mobile %>
+        </div>
+    <% end %>
+    
+ <%end%>
