@@ -2,21 +2,57 @@
 
 <h2> Add new customers </h2>
 <%= link_to 'Go to upload',upload_path %>
- <br>
- <br>
+
+
+<div class="color2">
+<strong>
+    <div class="row">
+        <div class="col-4">
+            Name
+        </div>
+        <div class="col-4">
+            Mobile
+        </div>
+        <div class="col-4">
+            Address
+        </div>
+    </div>
+</strong>
+</div>
+
+
 <% counter = 1 %>
- <% @customers.each do |c| %>
+<% @customers.each do |c| %>
     <% counter = counter + 1 %>
+
     <% if counter % 2 == 0  %>
         <div class="color1">
-            <%=c.name %>
-            <%=c.mobile %>
+            <div class="row">
+                <div class="col-4">
+                    <%=c.name %>
+                </div>
+                <div class="col-4">
+                    <%=c.mobile %>
+                </div>
+                <div class="col-4">
+                    <%=c.address %>
+                </div>
+            </div>
         </div>
+
     <% else %>
         <div class="color2">
-            <%=c.name %>
-            <%=c.mobile %>
+            <div class="row">
+                <div class="col-4">
+                    <%=c.name %>
+                </div>
+                <div class="col-4">
+                    <%=c.mobile %>
+                </div>
+                <div class="col-4">
+                    <%=c.address %>
+                </div>
+            </div>
         </div>
     <% end %>
-    
  <%end%>
