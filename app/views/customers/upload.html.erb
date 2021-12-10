@@ -1,0 +1,7 @@
+<h1> Upload </h1>
+
+<%= form_with model: @customers do |form| %>
+    <%= form.label 'File upload' %>
+    <%= form.file_field :file, accept: 'application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' %>
+    
+<%end%>
