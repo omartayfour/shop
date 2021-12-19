@@ -1,8 +1,10 @@
+# frozen_string_literal: false
+
+# class CustomersController
 class CustomersController < ApplicationController
   require 'roo'
 
   def index
-    #@customers = Customer.all
     @customers = Customer.paginate(page: params[:page], per_page: 5)
   end
 
@@ -20,8 +22,4 @@ class CustomersController < ApplicationController
     end
     redirect_to root_path
   end
-
-  def upload_choices
-  end
-
 end
