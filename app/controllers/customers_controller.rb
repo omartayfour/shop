@@ -3,7 +3,7 @@ class CustomersController < ApplicationController
 
   def index
     #@customers = Customer.all
-    @cusomters = Customer.paginate(page: params[:page], per_page: 5)
+    @customers = Customer.paginate(page: params[:page], per_page: 5)
   end
 
   def upload

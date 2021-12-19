@@ -20,7 +20,6 @@
 </strong>
 </div>
 
-
 <% counter = 1 %>
 <% @customers.each do |c| %>
     <% counter = counter + 1 %>
@@ -56,3 +55,7 @@
         </div>
     <% end %>
  <%end%>
+
+ <%= will_paginate @customers, class: 'digg_pagination' %>
+
+
