@@ -1,4 +1,10 @@
 <h1> Upload </h1>
+<h3>Notes for excel sheet:</h3>
+<ul>
+    <li>Column 1 in excel sheet: Name, Column 2: Mobile number, Column 3: Address</li>
+    <li>Number format is without the starting 0 and it will be saved in database with the 0. So for example 010 is 10.</li>
+    <li>As an example, the following phone number 010######## should be 10######## in the excel sheet.</li>
+</ul>
 <%= form_with do |form| %>
     <%= form.file_field :file , accept:"application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"%>
     <%= form.submit %>
