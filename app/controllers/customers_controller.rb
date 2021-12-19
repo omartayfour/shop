@@ -2,7 +2,8 @@ class CustomersController < ApplicationController
   require 'roo'
 
   def index
-    @customers = Customer.all
+    #@customers = Customer.all
+    @cusomters = Customer.paginate(page: params[:page], per_page: 5)
   end
 
   def upload
