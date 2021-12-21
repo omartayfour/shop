@@ -37,6 +37,12 @@ class CustomersController < ApplicationController
     redirect_to root_path
   end
 
+  def json_data
+    @customers = Customer.paginate(page: params[:page], per_page: 5)
+
+    render json: @customers
+  end
+
   private
 
   def customer_params
