@@ -1,0 +1,20 @@
+<h1>Edit Article</h1>
+
+<%= form_with model: @customer do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :mobile %><br>
+    <%= form.text_field :mobile %><br>
+  </div>
+  <div>
+    <%= form.label :address %><br>
+    <%= form.text_field :address %><br>
+  </div>
+  <%= link_to "Delete", customer_path(@customer) , method: :delete, data: { confirm: "Are you sure you want to delete #{@customer.name}?" } %>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

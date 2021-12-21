@@ -1,5 +1,7 @@
 require 'rails_helper'
+# Match regex
 
+# Has to be string
 RSpec.describe Customer, type: :model do
   it 'needs valid phone number' do
     customer = Customer.new(name: 'Omar Tayfour', mobile: '123456', address: 'Tester')

@@ -27,29 +27,36 @@
     <% if counter % 2 == 0  %>
         <div class="color1">
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <%=c.name %>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <%=c.mobile %>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <%=c.address %>
                 </div>
+                <div class="col-3">
+                    <%= link_to "Edit", edit_customer_path(c) %>
+                </div>
+                
             </div>
         </div>
 
     <% else %>
         <div class="color2">
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <%=c.name %>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <%=c.mobile %>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <%=c.address %>
+                </div>
+                <div class="col-3">
+                    <%= link_to "Edit", edit_customer_path(c) %>
                 </div>
             </div>
         </div>
