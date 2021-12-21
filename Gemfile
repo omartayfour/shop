@@ -70,3 +70,5 @@ group :development, :test do
 end
 
 gem 'rails-controller-testing'
+gem 'active_model_serializers', '~> 0.10.12'
+

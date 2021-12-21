@@ -33,19 +33,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
     @customer.destroy
 
-    flash[:notice] = 'Successfully deleted customer'
+    flash[:notice] = 'Successfully deleted customer' 
     redirect_to root_path
-  end
-
-  def json_data
-    @customers = Customer.paginate(page: params[:page], per_page: 5)
-
-    render json: @customers
-  end
-
-  private
-
-  def customer_params
-    params.require(:customer).permit(:name, :mobile, :address)
   end
 end
