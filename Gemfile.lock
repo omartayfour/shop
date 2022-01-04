@@ -270,6 +270,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  minitest (~> 5.14.4)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.1)
@@ -289,6 +290,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
   will_paginate (~> 3.1.1)
   will_paginate-bootstrap
+  zeitwerk
 
 RUBY VERSION
    ruby 2.7.4p191
